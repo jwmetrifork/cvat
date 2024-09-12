@@ -17,6 +17,8 @@ do
 
     echo "Deploying $func_rel_path function..."
     nuctl deploy --project-name cvat --path "$func_root" \
+        --triggers '{"myHttpTrigger": {"maxWorkers": 1}}' \
+        --resource-limit nvidia.com/gpu=1 \
         --file "$func_config" --platform local
 done
 
