@@ -13,7 +13,7 @@ It set's up Docker containers and installs nuctl for serverless functionality
 I've followed [this documentation](https://docs.cvat.ai/docs/administration/advanced/installation_automatic_annotation/).
 
 ### Automate the upload of YoloV8 models
-Wrote `upload_yolov8_model.sh`, a script to integrate YoloV8 detection models into CVAT.
+Wrote `upload_yolov8.sh`, a script to integrate YoloV8 detection models into CVAT. (Also added `upload_yolov8_seg.sh` for segmentation models)
 
 **Mandatory arguments:**
 - **-n:** model_name
@@ -44,7 +44,6 @@ For now follow [this guide](https://docs.cvat.ai/docs/manual/basics/attach-cloud
 Allow to drag and drop a model .pt
 
 ### Integrate other model
-- YoloV8-seg
 - SAM2
 - ...
 
